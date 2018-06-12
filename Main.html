@@ -2,24 +2,24 @@
 	<Head>
 		<Style>
 			div.container {
-				width: 100%
+						width: 100%
 			}
 			header, footer {
-				padding: 1em;
-				color: white;
-				background-color : rgb(47,103,175);
-				text-align: center;
+						padding: 1em;
+						color: white;
+						background-color : rgb(47,103,175);
+						text-align: center;
 			}
 			nav {
-				float: left;
+						float: left;
     				max-width: 200px;
-   				margin: 10;
+   					margin: 10;
     				padding: 1em;
 			}
 			article {
-   				margin-left: 170px;
+   					margin-left: 170px;
     				border-left: 1px solid gray;
-   				padding: 1em;
+   					padding: 1em;
     				overflow: hidden;
 			}
 			.button {
@@ -31,25 +31,48 @@
     				font-size: 16px;
     				cursor: pointer;
 			}
+			ul {
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+						width: 200px;
+						background-color: white;
+			}
+			li a {
+						display: block;
+						color: black;
+						padding: 8px 16px;
+			}
+			li a.active {
+						background-color: rgb(47,103,175);
+						color: white;
+			}
+			li a:hover:not(.active) {
+						background-color: #555;
+						color: white;
+			}
 		</Style>
-		<Title> School REACH Site </Title>
+					<Title> School REACH Site </Title>
 		<BR> <BR> <BR>
 	</Head>
 	<Header>
-		<Img src = "REACHLogo.png" height = "100" width = "100" align = "left">
-		<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
+					<Img src = "REACHLogo.png" height = "100" width = "100" align = "left">
+					<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
 	</Header>
 	<Body>
 	<nav>
-		<BR> <BR> <BR> <BR> <BR>
-		
+					<BR> <BR> <BR> <BR> <BR>
+					<ul>
+							<li> <a class = "active" href = "home"> Home </a> </li>
+							<li> <a href = "trainer"> Trainer </a> </li>
+							<li> <a href = "about"> About </a> </li>
+					</ul>
 	</nav>
 	<article>
-		<Img src = "SampleREACH.jpg" height = "450" width = "820">
+					<Img src = "SampleREACH.jpg" height = "450" width = "820">
 	</article>
 	</Body>
 	<Footer>
-		<P> <Font size = "4" color = "white"> Website Created By Rico Zhu, OTHS, on June 1st, 2018 </Font> </P>
+					<P> <Font size = "4" color = "white"> Website Created By Rico Zhu, OTHS, on June 1st, 2018 </Font> </P>
 	</Footer>
 </HTML>
-
