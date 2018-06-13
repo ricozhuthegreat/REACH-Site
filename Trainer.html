@@ -42,6 +42,19 @@
 				color: black;
 			}
 		</Style>
+		<Script>
+			function getQ() {
+				
+			}
+			function printQ() {
+				var canvas = document.getElementById('question');
+				var ctx = canvas.getContext("2d");
+				ctx.font = "50px Arial";
+				ctx.fillStyle = "black";
+				ctx.textAlign = "center";
+				ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+			}
+		</Script>
 		<Title> School REACH Site </Title>
 		<BR> <BR> <BR>
 	</Head>
@@ -56,7 +69,9 @@
 	</nav>
 	<article>
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
-		<Button id = "Sci" class = "button"> Science </Button>
+		<canvas id = "question" height = "500" width = "750" style="border:1px solid #000000;"> </canvas>
+		<Br> <Br>
+		<Button id = "Sci" class = "button" onclick = "printQ();"> Science </Button>
 		<Button id = "His" class = "button"> History </Button>
 		<Button id = "Geo" class = "button"> Geography </Button>
 		<br>
