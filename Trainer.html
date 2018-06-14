@@ -40,11 +40,29 @@
 				background-color: white;
 				border: 2px solid rgb(47,103,175);
 				color: black;
+			} ul {
+							list-style-type: none;
+							margin: 0;
+							padding: 0;
+							width: 200px;
+							background-color: rgb(235,235,235);
+			} li a {
+							display: block;
+							color: black;
+							padding: 18px 26px;
+							font-size: 18px;
+							text-decoration: none;
+			} li a.active {
+							background-color: rgb(47,103,175);
+							color: white;
+			} li a:hover:not(.active) {
+							background-color: #555;
+							color: white;
 			}
 		</Style>
 		<Script>
 			function getQ() {
-				
+
 			}
 			function printQ() {
 				var canvas = document.getElementById('question');
@@ -52,7 +70,7 @@
 				ctx.font = "50px Arial";
 				ctx.fillStyle = "black";
 				ctx.textAlign = "center";
-				ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+				ctx.fillText("getQ();", canvas.width/2, canvas.height/2);
 			}
 		</Script>
 		<Title> School REACH Site </Title>
@@ -64,8 +82,12 @@
 	</Header>
 	<Body>
 	<nav>
-		<BR> <BR> <BR> <BR> <BR>
-
+		<BR>
+			<ul>
+					<li> <a href = "Main.html"> Home </a> </li>
+					<li> <a class = "active"> Trainer </a> </li>
+					<li> <a href = "OT Reach"> About </a> </li>
+			</ul>
 	</nav>
 	<article>
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
