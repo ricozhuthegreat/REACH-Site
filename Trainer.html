@@ -21,8 +21,13 @@
 	<article>
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
 		<form id = "quiz" name = "quiz">
-
+			<p> What is the capital of Canada? </p>
+			<input id = "textbox" type = "text" name = "user">
+			<input id = "button" type = "button" value = "Check Answer" onclick = "check();">
 		</form>
+		<div id = "answer">
+			<p id = "message"></p>
+		</div>
 		<Br> <Br>
 		<Button id = "Sci" class = "button" onclick = "test();"> Science </Button>
 		<Button id = "His" class = "button"> History </Button>

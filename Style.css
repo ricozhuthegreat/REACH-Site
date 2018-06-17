@@ -1,3 +1,6 @@
+#answer {
+  visibility : hidden;
+}
 div.container {
   width: 100%
 }
