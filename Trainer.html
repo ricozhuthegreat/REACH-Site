@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <HTML>
 	<Head>
 		<link href = "Style.css" rel = "stylesheet">
-		<script src = "Quiz.js"> </script>
+		<script src = "Main.js"> </script>
 		<Title> School REACH Site </Title>
 		<BR> <BR> <BR>
 	</Head>
@@ -9,11 +10,11 @@
 		<Img src = "REACHLogo.png" height = "100" width = "100" align = "left" hspace = "100">
 		<P style = "margin-right:15em;"> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P>
 	</Header>
-	<Body>
+	<Body onload = "getQFromFile('file://C:/Users/ricoz/Desktop/REACH/test.txt')">
 	<nav>
 		<BR>
 			<ul>
-					<li> <a href = "Main.html"> Home </a> </li>
+					<li> <a href = "Home.html"> Home </a> </li>
 					<li> <a class = "active"> Trainer </a> </li>
 					<li> <a href = "OT Reach"> About </a> </li>
 			</ul>
@@ -21,7 +22,7 @@
 	<article>
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
 		<form id = "quiz" name = "quiz">
-			<p> What is the capital of Canada? </p>
+			<p id = "question"></p>
 			<input id = "textbox" type = "text" name = "user">
 			<input id = "button" type = "button" value = "Check Answer" onclick = "check();">
 		</form>
@@ -29,7 +30,7 @@
 			<p id = "message"></p>
 		</div>
 		<Br> <Br>
-		<Button id = "Sci" class = "button" onclick = "test();"> Science </Button>
+		<Button id = "Sci" class = "button" onclick = "getQFromFile('test.txt');"> Science </Button>
 		<Button id = "His" class = "button"> History </Button>
 		<Button id = "Geo" class = "button"> Geography </Button>
 		<br>
