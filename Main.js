@@ -3,17 +3,22 @@ function getQFromFile(fileName) {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", fileName, false);
     rawFile.onreadystatechange = function () {
-        if(rawFile.readyState === 4) {
-            console.log("Ready");
-            if(rawFile.status === 200 || rawFile.status == 0) {
+        if(rawFile.readyState == 4) {
+            if(rawFile.status == 200 || rawFile.status == 0) {
                 var allText = rawFile.responseText;
-                alert(allText);
+                console.log(allText);
             } else {
                 console.log(rawFile.status);
             }
         }
     }
-    // rawFile.send(null);
+    rawFile.send(null);
+}
+
+function readFile (fileName) {
+  File f = new File(fileName);
+  var reader = new FileReader();
+  reader.readAsText(fileName);
 }
 
 function check() {
