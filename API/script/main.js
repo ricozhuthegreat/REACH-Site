@@ -15,13 +15,7 @@ function getQFromFile(fileName) {
     rawFile.send(null);
 }
 
-function readFile (fileName) {
-  File f = new File(fileName);
-  var reader = new FileReader();
-  reader.readAsText(fileName);
-}
-
-function check() {
+function check () {
   var ans = document.quiz.user.value;
   document.getElementById("answer").style.visibility = "visible";
   if (ans == "answer") {
@@ -29,4 +23,8 @@ function check() {
   } else {
     document.getElementById("message").innerHTML = "Incorrect!";
   }
+}
+
+function test () {
+      window.alert("Test Successful");
 }

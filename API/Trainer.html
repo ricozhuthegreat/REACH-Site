@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <HTML>
 	<Head>
-		<link href = "Style.css" rel = "stylesheet">
-		<script src = "Main.js"> </script>
+		<link href = "styles/Style.css" rel = "stylesheet">
+		<script src = "script/main.js" rel = "script"> </script>
 		<Title> School REACH Site </Title>
 		<BR> <BR> <BR>
 	</Head>
 	<Header>
-		<Img src = "REACHLogo.png" height = "100" width = "100" align = "left" hspace = "100">
-		<P style = "margin-right:15em;"> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P>
+		<Img src = "images/REACHLogo.png" height = "100" width = "100" align = "left">
+		<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
 	</Header>
-	<Body onload = "readFile('file:///C:/Users/ricoz/Desktop/REACH/test.txt')">
+	<Body>
 	<nav>
 		<BR>
 			<ul>
-					<li> <a href = "Home.html"> Home </a> </li>
+					<li> <a href = "index.html"> Home </a> </li>
 					<li> <a class = "active"> Trainer </a> </li>
 					<li> <a href = "OT Reach"> About </a> </li>
 			</ul>
@@ -31,7 +31,7 @@
 		</div>
 		<Br> <Br>
 			<Button id = "Sci" class = "button" onclick =
-			"getQFromFile('file:///C:/Users/ricoz/Desktop/REACH/test.txt');"> Science </Button>
+			"test();"> Science </Button>
 			<Button id = "His" class = "button"> History </Button>
 			<Button id = "Geo" class = "button"> Geography </Button>
 		<br>
