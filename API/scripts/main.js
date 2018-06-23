@@ -1,12 +1,29 @@
 
-var mainImg = document.querySelector('img');
+window.onload = function() {
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/schoolOTHS');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
+    var mainImg = document.getElementById("image1");
+
+      mainImg.onclick = function() {
+        var mySrc = mainImg.getAttribute("src");
+        if(mySrc === "images/SampleREACH.jpg") {
+          mainImg.setAttribute ("src","images/schoolOTHS.jpg");
+        } else {
+          mainImg.setAttribute ("src","images/SampleREACH.jpg");
+        }
+    }
+    
+}
+
+function loadImage () {
+    var c = document.getElementById("mainCanvas");
+    if (c.getContext) {
+      var ctx = c.getContext("2d");
+      var img = new Image(820, 45);
+      img.onload = function () {
+            ctx.drawImage(img, 0, 0);
+      };
+      img.src = 'images/SampleREACH.jpg';
+      // ctx.drawImage(img, 820, 450);
     }
 }
 
