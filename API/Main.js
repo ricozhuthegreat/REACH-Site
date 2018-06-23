@@ -24,7 +24,7 @@ function readFile (fileName) {
 function check() {
   var ans = document.quiz.user.value;
   document.getElementById("answer").style.visibility = "visible";
-  if (ans == "Ottawa") {
+  if (ans == "answer") {
     document.getElementById("message").innerHTML = "Correct!";
   } else {
     document.getElementById("message").innerHTML = "Incorrect!";
