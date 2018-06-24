@@ -11,7 +11,7 @@ window.onload = function() {
           mainImg.setAttribute ("src","images/SampleREACH.jpg");
         }
     }
-    
+
 }
 
 function loadImage () {
@@ -51,8 +51,4 @@ function check () {
   } else {
     document.getElementById("message").innerHTML = "Incorrect!";
   }
-}
-
-function test () {
-      window.alert("Test Successful");
 }

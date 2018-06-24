@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<HTML>
+  <Head>
+    <link href = "styles/Style.css" rel = "stylesheet">
+    <Script src = "scripts/log-in.js"> </Script>
+    <Title> School REACH Site </Title>
+    <Br> <Br> <Br>
+  </Head>
+  <Header>
+					<img src = "images/REACHLogo.png" height = "100" width = "100" align = "left">
+					<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
+	</Header>
+  <nav>
+          <BR>
+          <ul>
+              <li> <a class = "active" href = "index.html"> Home </a> </li>
+              <li> <a href = "trainer.html"> Trainer </a> </li>
+              <li> <a href = "OT Reach"> About </a> </li>
+          </ul>
+  </nav>
+  <Body>
+    <article>
+      <p id = "message"> </p>
+      <H1 style = "margin-left:25px;"> <font size = "20"> Register </font> </H1>
+      <form method = "get" action = "" id = "form1" onsubmit = "store(this);">
+        <p style = "margin-left:25px;"> <B> Username: </B> </p>
+  			   <input type = "text" id = "username" placeholder = "enter a username" required value = ""
+           style = "margin-left:2em;">
+            <Br>
+        <p style = "margin-left:25px;"> <B> Password: </B> </p>
+          <input type = "password" id = "password" placeholder = "enter a password" required value = ""
+          style = "margin-left:2em;">
+            <Br> <Br>
+  			<input id = "submit" type = "submit" value = "Register" style = "margin-left:2em;">
+  		</form>
+      <Br> <Br> <Br>
+      <H1 style = "margin-left:25px;"> <font size = "20"> Log in </font> </H1>
+      <form method = "get" action = "" id = "form1" onsubmit = "login(this);">
+        <p style = "margin-left:25px;"> <B> Username: </B> </p>
+  			   <input id = "username" type = "text" placeholder = "enter your username" required value = ""
+           style = "margin-left:2em;">
+            <Br>
+        <p style = "margin-left:25px;"> <B> Password: </B> </p>
+          <input id = "password" type = "password" placeholder = "enter your password" required value = ""
+          style = "margin-left:2em;">
+            <Br> <Br>
+  			<input id = "submit" type = "submit" value = "Log in" style = "margin-left:2em;">
+  		</form>
+      <Br> <Br> <Br> <Br> <Br> <Br>
+    </article>
+  </Body>
+  <Footer>
+					<P> <Font size = "4" color = "white"> Website Created By Rico Zhu, OTHS, on June 1st, 2018 </Font> </P>
+	</Footer>
+</HTML>

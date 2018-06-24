@@ -1,0 +1,43 @@
+
+function store (form) {
+
+    document.getElementById("message").innerHTML = "";
+
+    var username = form["username"];
+    var password = form["password"];
+
+    localStorage.setItem("username", username.value);
+        // window.alert(localStorage.getItem("username"));
+    localStorage.setItem("password", password.value);
+        // window.alert(localStorage.getItem("password"));
+
+    document.getElementById('message').innerHTML = "Welcome, " + localStorage.getItme("username");
+    window.alert("Welcome, " + localStorage.getItem(username));
+
+    return false;
+}
+
+function login (form) {
+
+    var inputUsername = form["username"];
+    var inputPassword = form["password"];
+
+    var username = inputUsername.value;
+    var password = inputPassword.value;
+
+    if ((username == localStorage.getItem("username")) && (password == localStorage.getItem("password"))) {
+        window.alert("Welcome back, " + localStorage.getItem("username"));
+    } else {
+        window.alert("Invalid Log in");
+    }
+
+    return false;
+}
+// if (!localStorage.getItem("name")) {
+//     setUserName();
+// } else {
+//     window.alert("Hello There");
+//     var storedName = localStorage.getItem("name");
+//     myHeading.textContent =  "Welcome to the OT REACH Site, " + storedName;
+// }
+// }
