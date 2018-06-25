@@ -33,11 +33,3 @@ function login (form) {
 
     return false;
 }
-// if (!localStorage.getItem("name")) {
-//     setUserName();
-// } else {
-//     window.alert("Hello There");
-//     var storedName = localStorage.getItem("name");
-//     myHeading.textContent =  "Welcome to the OT REACH Site, " + storedName;
-// }
-// }

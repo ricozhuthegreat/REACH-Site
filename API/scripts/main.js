@@ -14,20 +14,25 @@ window.onload = function() {
 
 }
 
-function loadImage () {
-    var c = document.getElementById("mainCanvas");
-    if (c.getContext) {
-      var ctx = c.getContext("2d");
-      var img = new Image(820, 45);
-      img.onload = function () {
-            ctx.drawImage(img, 0, 0);
-      };
-      img.src = 'images/SampleREACH.jpg';
-      // ctx.drawImage(img, 820, 450);
+function readFile () {
+  // var xhttp = new XMLHttpRequest();
+  // xhttp.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     document.getElementById("testF").innerHTML =
+  //     this.responseText;
+  //   }
+  // };
+  // xhttp.open("GET", "test1.txt", true);
+  // xhttp.send();
+    var client = new XMLHttpRequest();
+    client.open('GET', 'test1.txt');
+    client.onreadystatechange = function() {
+      document.getElementById("testF").innerHTML = client.responseText;
     }
+    client.send();
 }
 
-function getQFromFile(fileName) {
+function getQFromFile (fileName) {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", fileName, false);
     rawFile.onreadystatechange = function () {
