@@ -3,7 +3,6 @@
 	<Head>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href = "styles/Style.css" rel = "stylesheet">
-		<script src = "scripts/main.js"> </script>
 		<Title> School REACH Site </Title>
 		<BR> <BR> <BR>
 	</Head>
@@ -12,10 +11,7 @@
 		<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
 	</Header>
 	<Body>
-		<div id = "testF">
-		<H1> Test Question </H1>
-		<button type = "button" onclick = "readFile();"> Change Test </button>
-		</div>
+			<script src = "scripts/questions.js"> </script>
 	<nav>
 		<BR>
 			<ul>
@@ -25,8 +21,11 @@
 			</ul>
 	</nav>
 	<article>
-
+		<div id = "mainQPage">
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
+		<div id = "mainQ">
+			<p> Hello There </p>
+		</div>
 		<form id = "quiz" name = "quiz">
 			<p id = "question"></p>
 			<input id = "textbox" type = "text" name = "user">
@@ -36,11 +35,11 @@
 			<p id = "message"></p>
 		</div>
 		<Br> <Br>
-			<Button id = "Sci" class = "button" onclick =
-			""> Science </Button>
+			<Button id = "Sci" class = "button" onclick = "getQuestions();"> Science </Button>
 			<Button id = "His" class = "button"> History </Button>
 			<Button id = "Geo" class = "button"> Geography </Button>
 		<br>
+		</div>
 	</article>
 	</Body>
 	<Footer>
