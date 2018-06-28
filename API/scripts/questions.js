@@ -1,4 +1,8 @@
 
+// These two arrays would be initialzed with a qestion reader
+var qustions = {};
+var answers = {};
+
 function renderQuestions (questions) {
       window.alert("There");
     var mainQDivRef = document.getElementById("mainQ");
@@ -22,4 +26,20 @@ function getQuestions () {
 function getQ (questions) {
       window.alert("Hello");
     renderQuestions(questions);
+}
+
+
+function getAns (num) {
+    var answer = answers[num];
+}
+
+function check (num) {
+    var inputAns = document.quiz.user.value;
+    var answer = getAns(num);
+    document.getElementById("answer").style.visibility = "visible";
+    if (inputAns === answer) {
+      document.getElementById("message").innerHTML = "Correct!";
+    } else {
+      document.getElementById("message").innerHTML = "Incorrect!";
+    }
 }

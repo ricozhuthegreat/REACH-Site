@@ -13,13 +13,3 @@ window.onload = function() {
     }
 
 }
-
-function check () {
-  var ans = document.quiz.user.value;
-  document.getElementById("answer").style.visibility = "visible";
-  if (ans === "answer") {
-    document.getElementById("message").innerHTML = "Correct!";
-  } else {
-    document.getElementById("message").innerHTML = "Incorrect!";
-  }
-}
