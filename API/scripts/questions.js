@@ -14,7 +14,6 @@ function getQuestions () {
 
   //  };
     req.open("GET", "questions.json", true);
-    window.alert(req.responseText);
     var questions = JSON.parse(req.responseText);
     getQ(questions);
     req.send(null);
