@@ -1,31 +1,42 @@
 
 // These two arrays would be initialzed with a qestion reader
-var qustions = {};
+var questions = {};
 var answers = {};
 
-function renderQuestions (questions) {
-      window.alert("There");
+var N = 0;
+// index of the current question the user is on
+var curr = 0;
+
+function renderQuestionsAns (text) {
     var mainQDivRef = document.getElementById("mainQ");
     var mainQDiv = document.createElement("div");
 
-    mainQDiv.innerHTML = questions.question;
+    var index = 0;
+    text.forEach(function () {
+        var currQ = text.question;
+        var currA = text.answer;
+        questions[index] = currQ;
+        answers[index] = currA;
+        index++;
+    });
+
+    mainQDiv.innerHTML = questions[curr];
     mainQDivRef.appendChild(mainQDiv);
 }
 
-function getQuestions () {
+function getQuestionsAns () {
     var req = new XMLHttpRequest();
   //  req.onload() = function () {
 
   //  };
     req.open("GET", "questions.json", true);
-    var questions = JSON.parse(req.responseText);
-    getQ(questions);
+    var text = JSON.parse(req.responseText);
+    getQA(text);
     req.send(null);
 }
 
-function getQ (questions) {
-      window.alert("Hello");
-    renderQuestions(questions);
+function getQA (text) {
+    renderQuestionsAns(text);
 }
 
 
