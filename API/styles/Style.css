@@ -1,4 +1,6 @@
-#answer {
+#about {
+  display : none;
+} #answer {
   visibility : hidden;
 }
 div.container {

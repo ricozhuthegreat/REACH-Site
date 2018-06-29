@@ -13,3 +13,11 @@ window.onload = function() {
     }
 
 }
+
+function getAbout () {
+    if (document.getElementById("about").style.display === "none") {
+        document.getElementById("about").style.display = "block";
+    } else {
+        document.getElementById("about").style.display = "none";
+    }
+}
