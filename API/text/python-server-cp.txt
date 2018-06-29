@@ -1,0 +1,9 @@
+C:\Users\ricoz>cd AppData
+
+C:\Users\ricoz\AppData>cd Local
+
+C:\Users\ricoz\AppData\Local>cd Programs
+
+C:\Users\ricoz\AppData\Local\Programs>cd Python
+
+C:\Users\ricoz\AppData\Local\Programs\Python>cd Python37
