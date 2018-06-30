@@ -7,12 +7,21 @@ var N = 0;
 // index of the current question the user is on
 var curr = 0;
 
-function checkAcc() {
+var rawScore = 0;
+var totalQuestions = 0;
+
+function checkAcc () {
     if (localStorage.getItem("username") === null) {
         window.alert("You don't have an account registered!");
     } else {
         window.alert("Welcome back, " + localStorage.getItem("username") + "!");
+        rawScore = localStorage.getItem("score");
+        totalQuestions = localStorage.getItem("totalQ");
     }
+}
+
+function calcScore (rawScore) {
+    return (rawScore / totalQuestions) * 100;
 }
 
 function renderQuestionsAns (text) {
@@ -20,6 +29,7 @@ function renderQuestionsAns (text) {
     var mainQDiv = document.createElement("div");
 
     var index = 0;
+
     text.forEach(function () {
         var currQ = text.question;
         var currA = text.answer;
@@ -57,8 +67,15 @@ function check (num) {
     var answer = getAns(num);
     document.getElementById("answer").style.visibility = "visible";
     if (inputAns === answer) {
-      document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").innerHTML = "Correct!";
+        score++;
+        totalQ++;
+        // Make an update to the local storage
+        localStorage.getItem("score") = score;
+        localStorage.getItem("totalQ") = totalQuestions;
     } else {
-      document.getElementById("message").innerHTML = "Incorrect!";
+        document.getElementById("message").innerHTML = "Incorrect!";
+        totalQ++;
+        localStorage.getItem("totalQ") = totalQuestions;
     }
 }
