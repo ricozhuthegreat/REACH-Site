@@ -7,6 +7,14 @@ var N = 0;
 // index of the current question the user is on
 var curr = 0;
 
+function checkAcc() {
+    if (localStorage.getItem("username") === null) {
+        window.alert("You don't have an account registered!");
+    } else {
+        window.alert("Welcome back, " + localStorage.getItem("username") + "!");
+    }
+}
+
 function renderQuestionsAns (text) {
     var mainQDivRef = document.getElementById("mainQ");
     var mainQDiv = document.createElement("div");

@@ -10,6 +10,7 @@ function store (form) {
         // window.alert(localStorage.getItem("username"));
     localStorage.setItem("password", password.value);
         // window.alert(localStorage.getItem("password"));
+    localStorage.setItem("pointScore", 0);
 
     document.getElementById('message').innerHTML = "Welcome, " + localStorage.getItme("username");
     window.alert("Welcome, " + localStorage.getItem(username));
