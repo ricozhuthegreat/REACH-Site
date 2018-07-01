@@ -11,7 +11,7 @@
 		<Img src = "images/REACHLogo.png" height = "100" width = "100" align = "left">
 		<Center> <P> <Font Size = "20" Color = "#f7f8f9"> <B> School REACH Site </B> </Font> </P> </Center>
 	</Header>
-	<Body onload = "checkAcc();">
+	<Body onload = "checkAcc(); getQFromLoc();">
 	<nav>
 		<BR>
 			<ul>
@@ -21,6 +21,7 @@
 			</ul>
 	</nav>
 	<article>
+		<input type = "file" id = "fileInput">
 		<div id = "mainQPage">
 		<B> <P style = "margin-left:2em;"> <Font size = "7"> Practice Page </Font> </P> </B>
 		<div id = "mainQ">

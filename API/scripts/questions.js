@@ -14,7 +14,7 @@ function checkAcc () {
     if (localStorage.getItem("username") === null) {
         window.alert("You don't have an account registered!");
     } else {
-        window.alert("Welcome back, " + localStorage.getItem("username") + "!");
+        // window.alert("Welcome back, " + localStorage.getItem("username") + "!");
         rawScore = localStorage.getItem("score");
         totalQuestions = localStorage.getItem("totalQ");
     }
@@ -78,4 +78,28 @@ function check (num) {
         totalQ++;
         localStorage.getItem("totalQ") = totalQuestions;
     }
+}
+
+function getQFromLoc () {
+    window.alert("Function called");
+    var fileInput = document.getElementById("fileInput");
+    var fileDisplayArea = document.getElementById("mainQ");
+
+    fileInput.addEventListener("change", function(e) {
+            window.alert("Event Handler called");
+            var file = fileInput.files[0];
+            var textType = /text.*/;
+
+            if (file.type.match(textType)) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    fileDisplayArea.innerText = reader.result;
+                }
+
+                reader.readAsText(file);
+            } else {
+                fileDisplayArea.innerText = "File not supported!"
+            }
+    });
 }
