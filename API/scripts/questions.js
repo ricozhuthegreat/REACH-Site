@@ -7,23 +7,6 @@ var N = 0;
 // index of the current question the user is on
 var curr = 0;
 
-var rawScore = 0;
-var totalQuestions = 0;
-
-function checkAcc () {
-    if (localStorage.getItem("username") === null) {
-        window.alert("You don't have an account registered!");
-    } else {
-        // window.alert("Welcome back, " + localStorage.getItem("username") + "!");
-        rawScore = localStorage.getItem("score");
-        totalQuestions = localStorage.getItem("totalQ");
-    }
-}
-
-function calcScore (rawScore) {
-    return (rawScore / totalQuestions) * 100;
-}
-
 function renderQuestionsAns (text) {
     var mainQDivRef = document.getElementById("mainQ");
     var mainQDiv = document.createElement("div");
@@ -53,15 +36,6 @@ function getQuestionsAns () {
     req.send(null);
 }
 
-function getQA (text) {
-    renderQuestionsAns(text);
-}
-
-
-function getAns (num) {
-    var answer = answers[num];
-}
-
 function check (num) {
     var inputAns = document.quiz.user.value;
     var answer = getAns(num);
@@ -81,20 +55,22 @@ function check (num) {
 }
 
 function getQFromLoc () {
-    window.alert("Function called");
+
     var fileInput = document.getElementById("fileInput");
     var fileDisplayArea = document.getElementById("mainQ");
 
     fileInput.addEventListener("change", function(e) {
-            window.alert("Event Handler called");
             var file = fileInput.files[0];
             var textType = /text.*/;
 
             if (file.type.match(textType)) {
                 var reader = new FileReader();
 
+                var wholeText = reader.result;
+
+                questions = renderQuestionsAns();
                 reader.onload = function(e) {
-                    fileDisplayArea.innerText = reader.result;
+                    fileDisplayArea.innerText = ;
                 }
 
                 reader.readAsText(file);
