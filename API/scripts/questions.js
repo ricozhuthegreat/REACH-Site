@@ -54,6 +54,14 @@ function check (num) {
     }
 }
 
+function readLine (questions) {
+    for (var i=0; i<80; i++) {
+        questions[i] = questions.parse("/n");
+        answers[i] = quesions.parse("/n");
+    }
+    return questions[0];
+}
+
 function getQFromLoc () {
 
     var fileInput = document.getElementById("fileInput");
@@ -70,7 +78,7 @@ function getQFromLoc () {
 
                 questions = renderQuestionsAns();
                 reader.onload = function(e) {
-                    fileDisplayArea.innerText = ;
+                    fileDisplayArea.innerText = readLine(questions);
                 }
 
                 reader.readAsText(file);
