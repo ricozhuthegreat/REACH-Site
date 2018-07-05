@@ -54,12 +54,16 @@ function check (num) {
     }
 }
 
-function readLine (questions) {
-    for (var i=0; i<80; i++) {
-        questions[i] = questions.parse("/n");
-        answers[i] = quesions.parse("/n");
+function readLine (q) {
+    var lines = this.result.split('\n');
+    for(var line = 0; line < lines.length; line++){
+        if (line%2 == 0) {
+            questions[line] = lines[line];
+        } else {
+            answers[line] = lines[line];
+        }
+
     }
-    return questions[0];
 }
 
 function getQFromLoc () {
@@ -76,11 +80,12 @@ function getQFromLoc () {
 
                 var wholeText = reader.result;
 
-                questions = renderQuestionsAns();
                 reader.onload = function(e) {
-                    fileDisplayArea.innerText = readLine(questions);
+                    //readLine(wholeText);
+                    window.alert(wholeText);
+                    mainQ.innterHTML = wholeText;
+                    //mainQ.innerHTML = questions[0];
                 }
-
                 reader.readAsText(file);
             } else {
                 fileDisplayArea.innerText = "File not supported!"
