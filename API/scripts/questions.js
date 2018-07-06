@@ -71,7 +71,7 @@ function getQFromLoc () {
     var fileInput = document.getElementById("fileInput");
     var fileDisplayArea = document.getElementById("mainQ");
 
-    fileInput.addEventListener("change", function(e) {
+    fileInput.addEventListener("change", function() {
             var file = fileInput.files[0];
             var textType = /text.*/;
 
@@ -80,15 +80,29 @@ function getQFromLoc () {
 
                 var wholeText = reader.result;
 
-                reader.onload = function(e) {
-                    //readLine(wholeText);
-                    window.alert(wholeText);
-                    mainQ.innterHTML = wholeText;
-                    //mainQ.innerHTML = questions[0];
-                }
+                reader.addEventListener("load", function (e) {
+                      fileDisplayArea.innerHTML = e.target.result;
+                });
+                // reader.onload = function(e) {
+                //     //readLine(wholeText);
+                //     fileDisplayArea = e.target.;
+                // }
                 reader.readAsText(file);
             } else {
                 fileDisplayArea.innerText = "File not supported!"
             }
     });
 }
+
+// input.addEventListener("change", function () {
+//   if (this.files && this.files[0]) {
+//     var myFile = this.files[0];
+//     var reader = new FileReader();
+//
+//     reader.addEventListener('load', function (e) {
+//       output.textContent = e.target.result;
+//     });
+//
+//     reader.readAsBinaryString(myFile);
+//   }
+// });
