@@ -54,7 +54,7 @@ function check (num) {
     }
 }
 
-function readLine (q) {
+function bufferLines (q) {
     var lines = this.result.split('\n');
     for(var line = 0; line < lines.length; line++){
         if (line%2 == 0) {
@@ -81,10 +81,11 @@ function getQFromLoc () {
                 var wholeText = reader.result;
 
                 reader.addEventListener("load", function (e) {
-                      fileDisplayArea.innerHTML = e.target.result;
+                      var contents = e.target.result;
+                      fileDisplayArea.innerHTML = contents;
                 });
                 // reader.onload = function(e) {
-                //     //readLine(wholeText);
+                //     //bufferLines(wholeText);
                 //     fileDisplayArea = e.target.;
                 // }
                 reader.readAsText(file);
