@@ -54,15 +54,11 @@ function check (num) {
     }
 }
 
-function bufferLines (q) {
+function bufferLines (contents) {
     var lines = this.result.split('\n');
-    for(var line = 0; line < lines.length; line++){
-        if (line%2 == 0) {
-            questions[line] = lines[line];
-        } else {
-            answers[line] = lines[line];
-        }
-
+    for (var line = 0; line < lines.length; line++){
+        questions[lines] = lines[line];
+        answer[lines] = lines[line+1];
     }
 }
 
