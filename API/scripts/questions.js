@@ -91,6 +91,21 @@ function getQFromLoc () {
     });
 }
 
+function getUserProfile () {
+    if (localStorage.getItem("username") === null) {
+        // No account detected; redirect to login
+        window.open("log-display.html");
+    } else {
+        var userProfile = document.getElementById("profile");
+        // var userScore = document.createElement("div");
+        userProfile.innerHTML = "Username";
+        if (userProfile.style.display === "none") {
+            userProfile.style.display = "block";
+        } else {
+            userProfile.style.display = "none";
+        }
+    }
+}
 // input.addEventListener("change", function () {
 //   if (this.files && this.files[0]) {
 //     var myFile = this.files[0];
